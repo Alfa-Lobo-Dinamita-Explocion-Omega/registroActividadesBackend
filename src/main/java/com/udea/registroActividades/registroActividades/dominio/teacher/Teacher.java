@@ -1,9 +1,8 @@
 package com.udea.registroActividades.registroActividades.dominio.teacher;
 
-import com.udea.registroActividades.registroActividades.dominio.teacher.dtos.TeacherRegistrationData;
+import com.udea.registroActividades.registroActividades.dominio.teacher.dto.TeacherRegistrationData;
 import jakarta.persistence.*;
 import lombok.*;
-import org.apache.catalina.User;
 
 @Entity
 @Table(name = "teachers")

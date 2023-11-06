@@ -1,7 +1,7 @@
-package com.udea.registroActividades.registroActividades.dominio.teacher.dtos;
+package com.udea.registroActividades.registroActividades.dominio.teacher.dto;
 
-import com.udea.registroActividades.registroActividades.dominio.teacher.interfaces.UniqueEmail;
-import com.udea.registroActividades.registroActividades.dominio.teacher.interfaces.UniqueIDDocument;
+import com.udea.registroActividades.registroActividades.validation.unique.Unique;
+import com.udea.registroActividades.registroActividades.validation.unique.UniqueFields;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -12,11 +12,11 @@ public record TeacherRegistrationData(
         @NotBlank String lastName,
         @NotBlank
         @Email
-        @UniqueEmail
+        @Unique(field = UniqueFields.EMAIL)
         String email,
         @NotBlank
         @Pattern(regexp = "\\d{4,12}")
-        @UniqueIDDocument
+        @Unique(field = UniqueFields.ID_DOCUMENT)
         String idDocument,
         @NotBlank
         @Size(min = 6, max = 6)

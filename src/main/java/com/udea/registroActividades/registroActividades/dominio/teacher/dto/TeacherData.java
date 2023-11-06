@@ -1,4 +1,4 @@
-package com.udea.registroActividades.registroActividades.dominio.teacher.dtos;
+package com.udea.registroActividades.registroActividades.dominio.teacher.dto;
 
 import com.udea.registroActividades.registroActividades.dominio.teacher.Teacher;
 

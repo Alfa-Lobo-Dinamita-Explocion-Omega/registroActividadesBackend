@@ -1,7 +1,7 @@
-package com.udea.registroActividades.registroActividades.controllers;
+package com.udea.registroActividades.registroActividades.controller;
 
-import com.udea.registroActividades.registroActividades.dominio.teacher.dtos.TeacherData;
-import com.udea.registroActividades.registroActividades.dominio.teacher.dtos.TeacherRegistrationData;
+import com.udea.registroActividades.registroActividades.dominio.teacher.dto.TeacherData;
+import com.udea.registroActividades.registroActividades.dominio.teacher.dto.TeacherRegistrationData;
 import com.udea.registroActividades.registroActividades.dominio.teacher.interfaces.TeacherService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;

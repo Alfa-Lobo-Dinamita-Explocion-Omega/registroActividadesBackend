@@ -1,7 +1,7 @@
 package com.udea.registroActividades.registroActividades.dominio.teacher;
 
-import com.udea.registroActividades.registroActividades.dominio.teacher.dtos.TeacherData;
-import com.udea.registroActividades.registroActividades.dominio.teacher.dtos.TeacherRegistrationData;
+import com.udea.registroActividades.registroActividades.dominio.teacher.dto.TeacherData;
+import com.udea.registroActividades.registroActividades.dominio.teacher.dto.TeacherRegistrationData;
 import com.udea.registroActividades.registroActividades.dominio.teacher.interfaces.TeacherService;
 import org.springframework.stereotype.Service;
 
