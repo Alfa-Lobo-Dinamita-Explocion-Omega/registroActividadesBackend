@@ -14,9 +14,6 @@ public record CourseRegistrationData(
         @NotBlank
         String name,
         @NotNull
-        ProgramType programType,
-        @NotBlank
-        @Pattern(regexp = "^\\d{4}-[1-2]$")
-        String semester
+        ProgramType programType
 ) {
 }
