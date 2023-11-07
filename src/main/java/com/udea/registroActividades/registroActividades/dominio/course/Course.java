@@ -1,6 +1,7 @@
 package com.udea.registroActividades.registroActividades.dominio.course;
 
 import com.udea.registroActividades.registroActividades.dominio.course.dto.CourseRegistrationData;
+import com.udea.registroActividades.registroActividades.dominio.teacher.Teacher;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -24,9 +25,6 @@ public class Course {
     @Enumerated(EnumType.STRING)
     @Column(name = "program_type", nullable = false)
     private ProgramType programType;
-
-
-
 
     private Course(String courseCode, String name, ProgramType programType) {
         this.courseCode = courseCode;

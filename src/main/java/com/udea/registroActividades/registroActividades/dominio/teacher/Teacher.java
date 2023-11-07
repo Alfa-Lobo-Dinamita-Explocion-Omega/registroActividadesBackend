@@ -13,6 +13,7 @@ public class Teacher {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private String name;
 
     @Column(name = "last_name")
@@ -21,9 +22,10 @@ public class Teacher {
     @Column(nullable = false, unique = true)
     private String email;
 
-    @Column(name = "id_number", nullable = false, unique = true)
+    @Column(name = "id_document", nullable = false, unique = true)
     private String idDocument;
 
+    @Column(nullable = false)
     private String password;
 
     private Teacher(String name, String lastName, String email, String idDocument, String password){

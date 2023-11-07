@@ -5,16 +5,14 @@ import com.udea.registroActividades.registroActividades.dominio.course.dto.Cours
 import com.udea.registroActividades.registroActividades.dominio.course.interfaces.CourseService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
 
 @RestController
 @RequestMapping("/courses")
+@CrossOrigin("*")
 public class CourseController {
     private CourseService courseService;
 
