@@ -4,6 +4,7 @@ import com.udea.registroActividades.registroActividades.dominio.course.Course;
 import com.udea.registroActividades.registroActividades.dominio.teacher.Teacher;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -11,6 +12,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "grupos")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@EqualsAndHashCode(of = "id")
 public class Group {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
