@@ -1,5 +1,6 @@
 package com.udea.registroActividades.registroActividades.dominio.teacher.dto;
 
+import com.udea.registroActividades.registroActividades.dominio.teacher.Role;
 import com.udea.registroActividades.registroActividades.validation.unique.Unique;
 import com.udea.registroActividades.registroActividades.validation.unique.UniqueFields;
 import jakarta.validation.constraints.Email;
@@ -21,6 +22,9 @@ public record TeacherRegistrationData(
         @NotBlank
         @Size(min = 6, max = 6)
         @Pattern(regexp = "^[a-zA-Z0-9]{3}[a-zA-Z0-9]{3}$")
-        String password
+        String password,
+
+        Role role
+
 ) {
 }

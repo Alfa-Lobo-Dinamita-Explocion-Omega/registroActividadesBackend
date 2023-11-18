@@ -1,13 +1,12 @@
 package com.udea.registroActividades.registroActividades.controller;
 
 
-import com.udea.registroActividades.registroActividades.dominio.teacher.DateAuthTeacher;
+import com.udea.registroActividades.registroActividades.dominio.teacher.dto.DateAuthTeacher;
 import com.udea.registroActividades.registroActividades.dominio.teacher.Teacher;
 import com.udea.registroActividades.registroActividades.infra.security.DatosJWttoken;
 import com.udea.registroActividades.registroActividades.infra.security.TokenService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

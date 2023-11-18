@@ -34,29 +34,34 @@ public class Teacher implements UserDetails {
     @Column(nullable = false)
     private String password;
 
-    private Teacher(String name, String lastName, String email, String idDocument, String password){
+    @Enumerated(EnumType.STRING)
+    private Role role;
+
+    private Teacher(String name, String lastName, String email, String idDocument, String password,Role role){
         this.name = name;
         this.lastName = lastName;
         this.email = email;
         this.idDocument = idDocument;
         this.password = password;
+        this.role= role;
     }
 
     public static Teacher createTeacher(TeacherRegistrationData teacherRegistrationData) {
         // falta  agregar el passwordEncodeService
-        // String encodedPassword = passwordEncoderService.encode(userRegistrationData.password());
+        //String encodedPassword = passwordEncoderService.encode(teacherRegistrationData.password());
         return new Teacher(
                 teacherRegistrationData.name(),
                 teacherRegistrationData.lastName(),
                 teacherRegistrationData.email(),
                 teacherRegistrationData.idDocument(),
-                teacherRegistrationData.password());
+                teacherRegistrationData.password(),
+                teacherRegistrationData.role());
     }
 
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority("ROLE_USER"));
+        return role.getAuthorities();
     }
 
     @Override
