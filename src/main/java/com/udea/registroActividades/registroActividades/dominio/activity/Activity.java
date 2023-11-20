@@ -1,7 +1,8 @@
 package com.udea.registroActividades.registroActividades.dominio.activity;
 
-import com.udea.registroActividades.registroActividades.dominio.activity.dto.ActivityRegistrationData;
-import com.udea.registroActividades.registroActividades.dominio.group.Group;
+
+import com.udea.registroActividades.registroActividades.dominio.group.model.Group;
+
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.EqualsAndHashCode;

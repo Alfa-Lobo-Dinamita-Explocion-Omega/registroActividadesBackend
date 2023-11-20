@@ -12,7 +12,6 @@ import java.net.URI;
 
 @RestController
 @RequestMapping("/courses")
-@CrossOrigin("*")
 public class CourseController {
     private CourseService courseService;
 
@@ -26,4 +25,6 @@ public class CourseController {
         URI uri = uriComponentsBuilder.path("/cuorses/{id}").buildAndExpand(courseData.id()).toUri();
         return ResponseEntity.created(uri).body(courseData);
     }
+
+    
 }

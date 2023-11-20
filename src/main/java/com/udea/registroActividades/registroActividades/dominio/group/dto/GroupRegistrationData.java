@@ -1,6 +1,7 @@
 package com.udea.registroActividades.registroActividades.dominio.group.dto;
 
-import com.udea.registroActividades.registroActividades.dominio.group.Modality;
+import com.udea.registroActividades.registroActividades.dominio.group.model.Modality;
+
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;

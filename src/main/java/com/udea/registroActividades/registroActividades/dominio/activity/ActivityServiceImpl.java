@@ -3,11 +3,7 @@ package com.udea.registroActividades.registroActividades.dominio.activity;
 import com.udea.registroActividades.registroActividades.dominio.activity.dto.ActivityData;
 import com.udea.registroActividades.registroActividades.dominio.activity.dto.ActivityRegistrationData;
 import com.udea.registroActividades.registroActividades.dominio.activity.interfaces.ActivityService;
-import com.udea.registroActividades.registroActividades.dominio.course.CourseRepository;
-import com.udea.registroActividades.registroActividades.dominio.group.Group;
 import com.udea.registroActividades.registroActividades.dominio.group.GroupRepository;
-import com.udea.registroActividades.registroActividades.dominio.teacher.TeacherRepository;
-import com.udea.registroActividades.registroActividades.dominio.teacher.dto.TeacherData;
 import org.springframework.stereotype.Service;
 
 

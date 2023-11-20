@@ -19,9 +19,8 @@ public class TeacherController {
     }
 
     @PostMapping
-    public ResponseEntity registerTeacher(@RequestBody @Valid TeacherRegistrationData teacherRegistrationData){
+    public ResponseEntity<TeacherData> registerTeacher(@RequestBody @Valid TeacherRegistrationData teacherRegistrationData){
         TeacherData teacherData = this.teacherService.registerTeacher(teacherRegistrationData);
-
         return ResponseEntity.created(null).body(teacherData);
     }
 

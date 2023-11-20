@@ -30,10 +30,20 @@ public class ErrorHandler {
         return ResponseEntity.badRequest().body(errors);
     }
 
+    @ExceptionHandler( DataIntegrityValidationException.class)
+    public ResponseEntity  handlerDataIntegrityValidationException( DataIntegrityValidationException e) {
+        var errors = e.getValidationExceptions().stream().map(DatosErrorValidacion::new).toList();
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(errors);
+    }
+
 
     private record DatosErrorValidacion(String field, String error){
         public DatosErrorValidacion(FieldError error) {
             this(error.getField(), error.getDefaultMessage());
+        }
+
+        public DatosErrorValidacion(CustomValidationException e) {
+            this(e.getField(), e.getMessage());
         }
     }
 }

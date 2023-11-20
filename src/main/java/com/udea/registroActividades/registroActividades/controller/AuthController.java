@@ -6,6 +6,8 @@ import com.udea.registroActividades.registroActividades.dominio.teacher.Teacher;
 import com.udea.registroActividades.registroActividades.infra.security.DatosJWttoken;
 import com.udea.registroActividades.registroActividades.infra.security.TokenService;
 import jakarta.validation.Valid;
+import lombok.var;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -26,7 +28,7 @@ public class AuthController {
     private TokenService tokenService;
 
     @PostMapping(value = "login")
-    public ResponseEntity autenticarUsuario(@RequestBody @Valid DateAuthTeacher dateAuthTeacher ){
+    public ResponseEntity<DatosJWttoken> autenticarUsuario(@RequestBody @Valid DateAuthTeacher dateAuthTeacher ){
         Authentication authToken= new UsernamePasswordAuthenticationToken(dateAuthTeacher.email(),dateAuthTeacher.password());
         var usuarioAutenticado = authenticationManager.authenticate(authToken);
         var JWttoken = tokenService.generarToken((Teacher) usuarioAutenticado.getPrincipal());
