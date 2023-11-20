@@ -1,4 +1,4 @@
-package com.udea.registroActividades.registroActividades.dominio.group;
+package com.udea.registroActividades.registroActividades.dominio.group.model;
 
 import com.udea.registroActividades.registroActividades.dominio.course.Course;
 import com.udea.registroActividades.registroActividades.dominio.teacher.Teacher;

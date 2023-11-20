@@ -10,16 +10,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static com.udea.registroActividades.registroActividades.dominio.teacher.Permission.ADMIN_CREATE;
-import static com.udea.registroActividades.registroActividades.dominio.teacher.Permission.ADMIN_DELETE;
-import static com.udea.registroActividades.registroActividades.dominio.teacher.Permission.ADMIN_READ;
-import static com.udea.registroActividades.registroActividades.dominio.teacher.Permission.ADMIN_UPDATE;
-import static com.udea.registroActividades.registroActividades.dominio.teacher.Permission.TEACHER_CREATE;
-import static com.udea.registroActividades.registroActividades.dominio.teacher.Permission.TEACHER_DELETE;
-import static com.udea.registroActividades.registroActividades.dominio.teacher.Permission.TEACHER_READ;
-import static com.udea.registroActividades.registroActividades.dominio.teacher.Permission.TEACHER_UPDATE;
-
-
 @RequiredArgsConstructor
 public enum Role {
 
