@@ -13,6 +13,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import static com.udea.registroActividades.registroActividades.dominio.teacher.Role.ADMIN;
 import static com.udea.registroActividades.registroActividades.dominio.teacher.Role.TEACHER;
@@ -28,7 +31,8 @@ public class SecurityConfiguration {
     private SecurityFilter securityFilter;
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
-        return  httpSecurity.csrf().disable().sessionManagement()
+
+        return  httpSecurity.cors().and().csrf().disable().sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and().authorizeRequests()
                 .requestMatchers(POST, "/auth/**")
@@ -77,6 +81,8 @@ public class SecurityConfiguration {
     public PasswordEncoder passwordEncoder(){
         return  new BCryptPasswordEncoder();
     }
+
+
 
 
 }
