@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.Collection;
 
@@ -41,19 +42,18 @@ public class Teacher implements UserDetails {
         this.email = email;
         this.idDocument = idDocument;
         this.password = password;
-        this.role= role;
+        this.role = role;
     }
 
-    public static Teacher createTeacher(TeacherRegistrationData teacherRegistrationData) {
-        // falta  agregar el passwordEncodeService
-        //String encodedPassword = passwordEncoderService.encode(teacherRegistrationData.password());
+    public static Teacher createTeacher(TeacherRegistrationData teacherRegistrationData, PasswordEncoder passwordEncoder) {
+        String encodedPassword = passwordEncoder.encode(teacherRegistrationData.password());
         return new Teacher(
                 teacherRegistrationData.name(),
                 teacherRegistrationData.lastName(),
                 teacherRegistrationData.email(),
                 teacherRegistrationData.idDocument(),
-                teacherRegistrationData.password(),
-                teacherRegistrationData.role());
+                encodedPassword,
+                Role.TEACHER);
     }
 
 
