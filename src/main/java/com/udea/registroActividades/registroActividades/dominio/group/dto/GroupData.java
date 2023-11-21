@@ -11,7 +11,8 @@ public record GroupData(
         String teacherIdDocument,
         Modality modality,
         String schedule,
-        String semester
+        String semester,
+        Long hoursWorked
 ) {
     public GroupData(Group group) {
         this(
@@ -21,6 +22,7 @@ public record GroupData(
                 group.getTeacher().getIdDocument(),
                 group.getModality(),
                 group.getSchedule(),
-                group.getSemester());
+                group.getSemester(),
+                group.getHoursWorked());
     }
 }
