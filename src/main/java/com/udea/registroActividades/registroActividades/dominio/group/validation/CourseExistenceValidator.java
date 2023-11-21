@@ -18,7 +18,7 @@ public class CourseExistenceValidator implements GroupValidator {
     @Override
     public void validate(GroupRegistrationData data) {
        if (!this.courseRepository.existsByCourseCode(data.courseCode())) {
-            throw new CustomValidationException("CourseCode", ("No record of a course with code " + data.courseCode()));
+            throw new CustomValidationException("courseCode", ("No record of a course with code " + data.courseCode()));
        }
     }
     

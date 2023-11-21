@@ -3,6 +3,8 @@ package com.udea.registroActividades.registroActividades.dominio.course;
 import com.udea.registroActividades.registroActividades.dominio.course.dto.CourseData;
 import com.udea.registroActividades.registroActividades.dominio.course.dto.CourseRegistrationData;
 import com.udea.registroActividades.registroActividades.dominio.course.interfaces.CourseService;
+import com.udea.registroActividades.registroActividades.dominio.course.model.Course;
+
 import org.springframework.stereotype.Service;
 
 @Service

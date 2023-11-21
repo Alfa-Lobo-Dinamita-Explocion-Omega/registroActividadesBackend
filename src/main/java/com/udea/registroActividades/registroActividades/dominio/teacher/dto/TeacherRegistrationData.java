@@ -1,6 +1,6 @@
 package com.udea.registroActividades.registroActividades.dominio.teacher.dto;
 
-import com.udea.registroActividades.registroActividades.dominio.teacher.Role;
+import com.udea.registroActividades.registroActividades.dominio.teacher.model.Role;
 import com.udea.registroActividades.registroActividades.validation.unique.Unique;
 import com.udea.registroActividades.registroActividades.validation.unique.UniqueFields;
 

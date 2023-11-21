@@ -1,7 +1,7 @@
 package com.udea.registroActividades.registroActividades.dominio.course.dto;
 
-import com.udea.registroActividades.registroActividades.dominio.course.Course;
-import com.udea.registroActividades.registroActividades.dominio.course.ProgramType;
+import com.udea.registroActividades.registroActividades.dominio.course.model.Course;
+import com.udea.registroActividades.registroActividades.dominio.course.model.ProgramType;
 
 public record CourseData(
         Long id,

@@ -1,22 +1,16 @@
 package com.udea.registroActividades.registroActividades.dominio.activity.dto;
 
-import com.udea.registroActividades.registroActividades.dominio.activity.Activity;
-import com.udea.registroActividades.registroActividades.dominio.activity.TypeActivity;
-
+import com.udea.registroActividades.registroActividades.dominio.activity.model.Activity;
+import com.udea.registroActividades.registroActividades.dominio.activity.model.TypeActivity;
 
 import java.util.Date;
 
 public record ActivityData(
         Long id,
-
         TypeActivity typeActivity,
-
         String description,
-
         Date date,
-
-        String time,
-
+        Long time,
         Long group
 ) {
 

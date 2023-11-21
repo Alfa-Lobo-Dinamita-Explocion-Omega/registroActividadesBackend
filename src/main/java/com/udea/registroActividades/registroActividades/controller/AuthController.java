@@ -2,7 +2,7 @@ package com.udea.registroActividades.registroActividades.controller;
 
 
 import com.udea.registroActividades.registroActividades.dominio.teacher.dto.DateAuthTeacher;
-import com.udea.registroActividades.registroActividades.dominio.teacher.Teacher;
+import com.udea.registroActividades.registroActividades.dominio.teacher.model.Teacher;
 import com.udea.registroActividades.registroActividades.infra.security.DatosJWttoken;
 import com.udea.registroActividades.registroActividades.infra.security.TokenService;
 import jakarta.validation.Valid;

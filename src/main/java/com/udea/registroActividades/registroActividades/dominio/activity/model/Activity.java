@@ -1,4 +1,4 @@
-package com.udea.registroActividades.registroActividades.dominio.activity;
+package com.udea.registroActividades.registroActividades.dominio.activity.model;
 
 
 import com.udea.registroActividades.registroActividades.dominio.group.model.Group;
@@ -33,14 +33,14 @@ public class Activity {
     private Date date;
 
     @Column(nullable = false)
-    private String time;
+    private Long time;
 
     @ManyToOne
     @JoinColumn(referencedColumnName = "id",nullable = false, name="id_group")
     private Group group;
 
 
-    public Activity( TypeActivity typeActivity, String description, Date date, String time, Group group) {
+    public Activity( TypeActivity typeActivity, String description, Date date, Long time, Group group) {
 
         this.typeActivity = typeActivity;
         this.description = description;

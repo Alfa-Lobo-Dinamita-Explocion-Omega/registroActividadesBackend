@@ -15,9 +15,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import static com.udea.registroActividades.registroActividades.dominio.teacher.Role.ADMIN;
-import static com.udea.registroActividades.registroActividades.dominio.teacher.Role.TEACHER;
-import static com.udea.registroActividades.registroActividades.dominio.teacher.Permission.*;
+import static com.udea.registroActividades.registroActividades.dominio.teacher.model.Permission.*;
+import static com.udea.registroActividades.registroActividades.dominio.teacher.model.Role.ADMIN;
+import static com.udea.registroActividades.registroActividades.dominio.teacher.model.Role.TEACHER;
 import static org.springframework.http.HttpMethod.*;
 
 

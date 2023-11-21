@@ -1,4 +1,4 @@
-package com.udea.registroActividades.registroActividades.dominio.course;
+package com.udea.registroActividades.registroActividades.dominio.course.model;
 
 import com.udea.registroActividades.registroActividades.dominio.course.dto.CourseRegistrationData;
 import jakarta.persistence.*;

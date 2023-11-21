@@ -1,6 +1,6 @@
 package com.udea.registroActividades.registroActividades.dominio.course.dto;
 
-import com.udea.registroActividades.registroActividades.dominio.course.ProgramType;
+import com.udea.registroActividades.registroActividades.dominio.course.model.ProgramType;
 import com.udea.registroActividades.registroActividades.validation.unique.Unique;
 import com.udea.registroActividades.registroActividades.validation.unique.UniqueFields;
 

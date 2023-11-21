@@ -1,7 +1,8 @@
 package com.udea.registroActividades.registroActividades.dominio.group.model;
 
-import com.udea.registroActividades.registroActividades.dominio.course.Course;
-import com.udea.registroActividades.registroActividades.dominio.teacher.Teacher;
+import com.udea.registroActividades.registroActividades.dominio.course.model.Course;
+import com.udea.registroActividades.registroActividades.dominio.teacher.model.Teacher;
+
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.EqualsAndHashCode;
@@ -40,7 +41,7 @@ public class Group {
     private String semester;
 
     @Column(name = "hours_worked")
-    private Long hoursWorked;
+    private Long hoursWorked = 0L;
 
 
     public Group(String groupNumber, Course course, Teacher teacher, Modality modality, String schedule, String semester) {
@@ -50,6 +51,11 @@ public class Group {
         this.modality = modality;
         this.schedule = schedule;
         this.semester = semester;
+    }
+
+
+    public void addHoursWorked(Long time) {
+        this.hoursWorked += time;
     }
 }
 

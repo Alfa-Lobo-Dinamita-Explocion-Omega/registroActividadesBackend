@@ -7,7 +7,8 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.interfaces.DecodedJWT;
-import com.udea.registroActividades.registroActividades.dominio.teacher.Teacher;
+import com.udea.registroActividades.registroActividades.dominio.teacher.model.Teacher;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -27,7 +28,7 @@ public class TokenService {
             return JWT.create()
                     .withIssuer("udea")
                     .withSubject(teacher.getEmail())
-                    .withClaim("id",teacher.getId())
+                    .withClaim("id",teacher.getIdDocument())
                     .withExpiresAt(generarFechaExpiracion())
                     .sign(algorithm);
         } catch (JWTCreationException exception){

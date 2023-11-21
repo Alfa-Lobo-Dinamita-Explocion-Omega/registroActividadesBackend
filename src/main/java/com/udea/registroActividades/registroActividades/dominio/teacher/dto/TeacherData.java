@@ -1,7 +1,7 @@
 package com.udea.registroActividades.registroActividades.dominio.teacher.dto;
 
-import com.udea.registroActividades.registroActividades.dominio.teacher.Role;
-import com.udea.registroActividades.registroActividades.dominio.teacher.Teacher;
+import com.udea.registroActividades.registroActividades.dominio.teacher.model.Role;
+import com.udea.registroActividades.registroActividades.dominio.teacher.model.Teacher;
 
 public record TeacherData(
         String name,

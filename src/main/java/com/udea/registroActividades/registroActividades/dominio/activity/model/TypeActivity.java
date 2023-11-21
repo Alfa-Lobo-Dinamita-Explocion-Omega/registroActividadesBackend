@@ -1,4 +1,4 @@
-package com.udea.registroActividades.registroActividades.dominio.activity;
+package com.udea.registroActividades.registroActividades.dominio.activity.model;
 
 public enum TypeActivity {
     CLASE_VIRTUAL,

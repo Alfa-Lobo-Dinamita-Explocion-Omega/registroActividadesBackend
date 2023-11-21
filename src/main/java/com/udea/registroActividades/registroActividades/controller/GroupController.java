@@ -33,7 +33,7 @@ public class GroupController {
         return ResponseEntity.ok().body(this.groupService.getGroups());
     }
 
-    @GetMapping("/{idDocument}")
+    @GetMapping("/byTeacher/{idDocument}")
     public ResponseEntity<List<GroupData>> getGroupsByTeacher(@PathVariable String idDocument){
         return ResponseEntity.ok().body(this.groupService.getGroupsByTeacher(idDocument));
     }

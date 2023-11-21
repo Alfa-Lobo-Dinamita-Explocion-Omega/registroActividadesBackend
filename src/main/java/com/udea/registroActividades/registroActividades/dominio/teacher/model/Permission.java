@@ -1,4 +1,4 @@
-package com.udea.registroActividades.registroActividades.dominio.teacher;
+package com.udea.registroActividades.registroActividades.dominio.teacher.model;
 
 
 import lombok.Getter;

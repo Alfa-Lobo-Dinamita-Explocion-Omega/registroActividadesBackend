@@ -17,5 +17,7 @@ public interface GroupRepository extends JpaRepository<Group, Long> {
         String idDocument, 
         String semester, 
         String schedule);
+
+    
     
 }
